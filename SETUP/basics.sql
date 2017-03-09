@@ -41,7 +41,8 @@ CREATE TABLE "public"."goals" (
 	game INT NOT NULL REFERENCES "public"."games" (id),
 	lineup INT NOT NULL REFERENCES "public"."lineup" (id),
 	goaled_violet BOOLEAN NOT NULL DEFAULT FALSE,
-	goaled_yellow BOOLEAN NOT NULL DEFAULT FALSE
+	goaled_yellow BOOLEAN NOT NULL DEFAULT FALSE,
+	goaled TIMESTAMP WITH TIME ZONE DEFAULT now()
 );
 
 END;
